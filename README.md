@@ -14,3 +14,17 @@ cd hymnbook-py
 pip install
 
 python3 manage.py runserver 0.0.0.0:8000
+
+
+
+##########################################
+
+
+migration
+
+python3 manage.py migrate
+
+python3 manage.py makemigrations backoffice
+
+python3 manage.py sqlmigrate backoffice 0001
+
