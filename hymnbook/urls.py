@@ -9,6 +9,7 @@ from django.contrib import admin
 from django.contrib import admin
 from django.urls import path, include
 from backoffice import urls as backoffice_urls
+from . import views as main
 
 urlpatterns = [
     # Examples:
@@ -22,6 +23,7 @@ urlpatterns = [
     # enable the admin interface
     url(r'^admin/', admin.site.urls),
 
+    path('',main.home),
     path('backoffice/',include('backoffice.urls.urls'))
    # url(r'backoffice',backoffice_urls)
 ]
